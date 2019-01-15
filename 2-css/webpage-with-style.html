@@ -22,10 +22,16 @@
       #first-section {
         color: blue;
         background-color: #cef6ce;
-        width: 100px;
+        width: 200px;
+        float: left;
       }
       #second-section {
         background-color: #8ab4f7;
+        width: 200px;
+        float: right;
+      }
+      .clear-float {
+        clear: both;
       }
     </style>
   </head>
@@ -46,5 +52,9 @@
         Lorem ipsum dolor sit amet. <span id="underlined">underlined</span>
       </p>
     </div>
+    <div class="clear-float"></div>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum, quaerat.
+    </p>
   </body>
 </html>
