@@ -7,18 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <img
-      src="homer.jpg"
-      alt="Picture of Homer Simpson saying 'Doh!' and slapping his forehead"
-      width="100"
-      align="left"
-    />
-    <img
-      src="https://upload.wikimedia.org/wikipedia/en/0/0b/Marge_Simpson.png"
-      alt="Marge Simpson"
-      height="200"
-      align="left"
-    />
-    <p>Homer Simpson</p>
+    <form>
+      <p>Username: <input type="text" placeholder="your username" /></p>
+      <p>Stay logged in: <input type="checkbox" checked /></p>
+      <p>Under 18: <input type="radio" name="age" value="u18" /></p>
+      <p>Over 18: <input type="radio" name="age" value="o18" /></p>
+      <p>
+        Favorite Food:
+        <select>
+          <option>Pizza</option>
+          <option selected>Ice Cream</option>
+          <option>Sandwiches</option>
+        </select>
+      </p>
+      <p><input type="submit" value="click me" /></p>
+    </form>
   </body>
 </html>
