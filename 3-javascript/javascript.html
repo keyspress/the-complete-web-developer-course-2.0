@@ -5,33 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Javascript</title>
+    <style>
+      .circle {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        float: left;
+        margin: 50px;
+      }
+      #red-circle {
+        background-color: red;
+      }
+      #blue-circle {
+        background-color: blue;
+      }
+      #yellow-circle {
+        background-color: yellow;
+      }
+    </style>
   </head>
   <body>
-    <p id="text">Anything we like</p>
-    <button id="myButton">Change the text</button>
-    <p id="secondParagraph">JavaScript is ...</p>
-    <button id="secondButton">Append text</button>
-    <p id="empty"></p>
-    <button id="createParagraph">Create text</button>
-    <p id="moreText">This is some text</p>
-    <button id="styleText">Style Text</button>
+    <div class="circle" id="red-circle"></div>
+    <div class="circle" id="blue-circle"></div>
+    <div class="circle" id="yellow-circle"></div>
     <script type="text/javascript">
-      // comment
-      document.getElementById('myButton').onclick = function() {
-        document.getElementById('text').innerHTML = 'Any string we want';
+      document.getElementById('red-circle').onclick = function() {
+        document.getElementById('red-circle').style.display = 'none';
       };
-      document.getElementById('secondButton').onclick = function() {
-        document.getElementById('secondParagraph').innerHTML =
-          'Everyone knows ' +
-          document.getElementById('secondParagraph').innerHTML +
-          'cooler than Ruby';
+      document.getElementById('blue-circle').onclick = function() {
+        document.getElementById('blue-circle').style.display = 'none';
       };
-      document.getElementById('createParagraph').onclick = function() {
-        document.getElementById('empty').innerHTML =
-          'You made me! Are you a god?!';
-      };
-      document.getElementById('styleText').onclick = function() {
-        document.getElementById('moreText').style.display = 'none';
+      document.getElementById('yellow-circle').onclick = function() {
+        document.getElementById('yellow-circle').style.display = 'none';
       };
     </script>
   </body>
