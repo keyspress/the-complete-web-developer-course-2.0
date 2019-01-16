@@ -7,18 +7,18 @@
     <title>Javascript</title>
   </head>
   <body>
-    <p>What is the magic word</p>
-    <input type="text" id="magicWord" /><br />
-    <button id="checkMagicWord">Enter</button>
+    <p>How many fingers am I holding up?</p>
+    <input type="text" id="guess" /><br />
+    <button id="enter">Enter</button>
 
     <script type="text/javascript">
-      document.getElementById('checkMagicWord').onclick = function() {
-        var magicWordEntered = document.getElementById('magicWord').value;
-        var magicWord = 'doh';
-        if (magicWordEntered === magicWord) {
-          alert('You must be a wizard!');
+      document.getElementById('enter').onclick = function() {
+        var guess = document.getElementById('guess').value;
+        var fingers = Math.floor(Math.random() * 6);
+        if (guess == fingers) {
+          alert('You got it!');
         } else {
-          alert('Get out of here muggle!');
+          alert(`Nope, I was holding up ${fingers} fingers`);
         }
       };
     </script>
