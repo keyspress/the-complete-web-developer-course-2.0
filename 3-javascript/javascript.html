@@ -7,15 +7,20 @@
     <title>Javascript</title>
   </head>
   <body>
-    <script type="text/javascript">
-      var myArray = new Array();
-      myArray[0] = 'pizza';
-      myArray[1] = 'chocolate';
+    <p>What is the magic word</p>
+    <input type="text" id="magicWord" /><br />
+    <button id="checkMagicWord">Enter</button>
 
-      var tweets = ['tweet', 'tweet tweet', 'didily deet'];
-      tweets.push('You are a dork');
-      tweets.splice(2, 1, 'crocodile rock!');
-      console.log(tweets);
+    <script type="text/javascript">
+      document.getElementById('checkMagicWord').onclick = function() {
+        var magicWordEntered = document.getElementById('magicWord').value;
+        var magicWord = 'doh';
+        if (magicWordEntered === magicWord) {
+          alert('You must be a wizard!');
+        } else {
+          alert('Get out of here muggle!');
+        }
+      };
     </script>
   </body>
 </html>
