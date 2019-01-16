@@ -9,11 +9,24 @@
   <body>
     <p id="text">Anything we like</p>
     <button id="myButton">Change the text</button>
-
+    <p id="secondParagraph">JavaScript is ...</p>
+    <button id="secondButton">Append text</button>
+    <p id="empty"></p>
+    <button id="createParagraph">Create text</button>
     <script type="text/javascript">
       // comment
       document.getElementById('myButton').onclick = function() {
         document.getElementById('text').innerHTML = 'Any string we want';
+      };
+      document.getElementById('secondButton').onclick = function() {
+        document.getElementById('secondParagraph').innerHTML =
+          'Everyone knows ' +
+          document.getElementById('secondParagraph').innerHTML +
+          'cooler than Ruby';
+      };
+      document.getElementById('createParagraph').onclick = function() {
+        document.getElementById('empty').innerHTML =
+          'You made me! Are you a god?!';
       };
     </script>
   </body>
