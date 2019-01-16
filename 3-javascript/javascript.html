@@ -5,38 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Javascript</title>
-    <style>
-      .circle {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        float: left;
-        margin: 50px;
-      }
-      #red-circle {
-        background-color: red;
-      }
-      #blue-circle {
-        background-color: blue;
-      }
-      #yellow-circle {
-        background-color: yellow;
-      }
-    </style>
   </head>
   <body>
-    <div class="circle" id="red-circle"></div>
-    <div class="circle" id="blue-circle"></div>
-    <div class="circle" id="yellow-circle"></div>
+    <input type="text" id="inputBox" />
+    <button id="myButton">Change the text</button>
+    <p id="change">This is some text</p>
     <script type="text/javascript">
-      document.getElementById('red-circle').onclick = function() {
-        document.getElementById('red-circle').style.display = 'none';
-      };
-      document.getElementById('blue-circle').onclick = function() {
-        document.getElementById('blue-circle').style.display = 'none';
-      };
-      document.getElementById('yellow-circle').onclick = function() {
-        document.getElementById('yellow-circle').style.display = 'none';
+      document.getElementById('myButton').onclick = function() {
+        var inputText = '';
+        inputText = document.getElementById('inputBox').value;
+        document.getElementById('change').innerHTML = inputText;
       };
     </script>
   </body>
