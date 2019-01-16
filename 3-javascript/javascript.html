@@ -8,10 +8,13 @@
   </head>
   <body>
     <p id="text">Anything we like</p>
+    <button id="myButton">Change the text</button>
 
     <script type="text/javascript">
       // comment
-      document.getElementById('text').innerHTML = 'Any string we want';
+      document.getElementById('myButton').onclick = function() {
+        document.getElementById('text').innerHTML = 'Any string we want';
+      };
     </script>
   </body>
 </html>
