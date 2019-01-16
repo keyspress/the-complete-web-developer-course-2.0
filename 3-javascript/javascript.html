@@ -21,6 +21,17 @@
     <button id="guess">Guess</button>
 
     <script type="text/javascript">
+      function doAGuess(correctAnswer) {
+        var guess = Math.floor(Math.random() * 6);
+
+        if (guess == correctAnswer) {
+          // correct
+          return true;
+        } else {
+          // incorrect
+          return false;
+        }
+      }
       document.getElementById('guess').onclick = function() {
         var myNumber = document.getElementById('myNumber').value;
 
@@ -29,15 +40,9 @@
         var numberOfGuesses = 1;
 
         while (!gotIt) {
-          var guess = Math.floor(Math.random() * 6);
-
-          if (guess == myNumber) {
-            // correct
+          if (doAGuess(myNumber) == true) {
             gotIt = true;
-            alert(guess + '! ' + 'Got it in ' + numberOfGuesses + ' guesses.');
-          } else {
-            // incorrect
-            numberOfGuesses++;
+            alert('got it');
           }
         }
       };
