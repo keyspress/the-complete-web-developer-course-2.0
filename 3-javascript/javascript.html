@@ -6,21 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Javascript</title>
   </head>
+  <div id="tweetDiv"></div>
   <body>
-    <p>How many fingers am I holding up?</p>
-    <input type="text" id="guess" /><br />
-    <button id="enter">Enter</button>
-
     <script type="text/javascript">
-      document.getElementById('enter').onclick = function() {
-        var guess = document.getElementById('guess').value;
-        var fingers = Math.floor(Math.random() * 6);
-        if (guess == fingers) {
-          alert('You got it!');
-        } else {
-          alert(`Nope, I was holding up ${fingers} fingers`);
-        }
-      };
+      var tweetString = '';
+      var tweets = ['tweet', 'tweet tweet', 'didily deet'];
+      for (var i = 0; i < tweets.length; i++) {
+        tweetString = tweetString + `<p>${tweets[i]}</p>`;
+      }
+      document.getElementById('tweetDiv').innerHTML = tweetString;
     </script>
   </body>
 </html>
