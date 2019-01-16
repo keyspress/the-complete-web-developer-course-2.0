@@ -6,15 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Javascript</title>
   </head>
-  <div id="tweetDiv"></div>
+
   <body>
+    <p>How many fingers are you holding up?</p>
+    <br />
+    <select id="myNumber">
+      <option>0</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+    <button id="guess">Guess</button>
+
     <script type="text/javascript">
-      var tweetString = '';
-      var tweets = ['tweet', 'tweet tweet', 'didily deet'];
-      for (var i = 0; i < tweets.length; i++) {
-        tweetString = tweetString + `<p>${tweets[i]}</p>`;
-      }
-      document.getElementById('tweetDiv').innerHTML = tweetString;
+      document.getElementById('guess').onclick = function() {
+        var myNumber = document.getElementById('myNumber').value;
+
+        var gotIt = false;
+
+        var numberOfGuesses = 1;
+
+        while (!gotIt) {
+          var guess = Math.floor(Math.random() * 6);
+
+          if (guess == myNumber) {
+            // correct
+            gotIt = true;
+            alert(guess + '! ' + 'Got it in ' + numberOfGuesses + ' guesses.');
+          } else {
+            // incorrect
+            numberOfGuesses++;
+          }
+        }
+      };
     </script>
   </body>
 </html>
