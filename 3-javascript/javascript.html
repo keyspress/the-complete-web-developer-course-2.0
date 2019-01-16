@@ -7,15 +7,15 @@
     <title>Javascript</title>
   </head>
   <body>
-    <input type="text" id="inputBox" />
-    <button id="myButton">Change the text</button>
-    <p id="change">This is some text</p>
     <script type="text/javascript">
-      document.getElementById('myButton').onclick = function() {
-        var inputText = '';
-        inputText = document.getElementById('inputBox').value;
-        document.getElementById('change').innerHTML = inputText;
-      };
+      var myArray = new Array();
+      myArray[0] = 'pizza';
+      myArray[1] = 'chocolate';
+
+      var tweets = ['tweet', 'tweet tweet', 'didily deet'];
+      tweets.push('You are a dork');
+      tweets.splice(2, 1, 'crocodile rock!');
+      console.log(tweets);
     </script>
   </body>
 </html>
