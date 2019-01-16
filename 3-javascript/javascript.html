@@ -13,6 +13,8 @@
     <button id="secondButton">Append text</button>
     <p id="empty"></p>
     <button id="createParagraph">Create text</button>
+    <p id="moreText">This is some text</p>
+    <button id="styleText">Style Text</button>
     <script type="text/javascript">
       // comment
       document.getElementById('myButton').onclick = function() {
@@ -27,6 +29,9 @@
       document.getElementById('createParagraph').onclick = function() {
         document.getElementById('empty').innerHTML =
           'You made me! Are you a god?!';
+      };
+      document.getElementById('styleText').onclick = function() {
+        document.getElementById('moreText').style.display = 'none';
       };
     </script>
   </body>
