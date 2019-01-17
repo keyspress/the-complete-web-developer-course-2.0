@@ -9,15 +9,40 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css" />
-    <style></style>
+    <style>
+      #resizable {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+      }
+      #also {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+    </style>
   </head>
   <body>
-    <div id="draggable">Drag me!</div>
+    <div id="draggable">Drag me horizontally!</div>
+    <div style="width: 400px; height:300px; background-color: yellow">
+      <span>I'm stuck!</span>
+    </div>
+    <div id="resizable"></div>
+    <div id="also"></div>
 
     <script type="text/javascript">
-      $(function() {
-        $('#draggable').draggable();
+      $('#draggable').draggable({ axis: 'x' });
+      $('span').draggable({ containment: 'parent' });
+      $('#resizable').resizable({
+        grid: 50,
+        alsoResize: '#also',
+        resize: function(event, ui) {
+          if ($('#resizeable').width() > 300) {
+            alert('Man I need to go on a diet....');
+          }
+        }
       });
+      $('#also').resizable();
     </script>
   </body>
 </html>
