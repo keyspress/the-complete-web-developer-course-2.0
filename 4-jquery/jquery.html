@@ -8,18 +8,31 @@
     <!-- <script src="jquery.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <style>
-      #fadeIn {
-        display: none;
+      #circle {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: green;
       }
     </style>
   </head>
   <body>
-    <p id="text">Some text for now</p>
-    <button id="toggle">Toggle Text</button>
+    <div id="circle"></div>
 
     <script type="text/javascript">
-      $('#toggle').click(function() {
-        $('#text').fadeToggle();
+      $('#circle').click(function() {
+        $(this).animate(
+          {
+            width: '400px',
+            height: '400px',
+            marginLeft: '100px',
+            marginTop: '100px'
+          },
+          2000,
+          function() {
+            $(this).css('background-color', 'red');
+          }
+        );
       });
     </script>
   </body>
