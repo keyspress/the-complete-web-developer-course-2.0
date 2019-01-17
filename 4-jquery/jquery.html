@@ -10,16 +10,11 @@
     <style></style>
   </head>
   <body>
-    <p id="data"></p>
-
     <script type="text/javascript">
-      $.ajax('info.txt')
-        .done(function(data) {
-          $('#data').html(data);
-        })
-        .fail(function() {
-          alert('Could not get data');
-        });
+      var regex = /e/g;
+      var string = 'Regex is great!';
+      var result = string.match(regex);
+      alert(result);
     </script>
   </body>
 </html>
