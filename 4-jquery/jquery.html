@@ -23,16 +23,48 @@
     </style>
   </head>
   <body>
-    <div id="draggable"></div>
-    <div id="droppable"></div>
+    <div id="accordion">
+      <h3>Title</h3>
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae
+          inventore aliquid nihil expedita impedit veritatis sit animi qui rerum
+          ipsam quasi quisquam doloremque, laudantium perspiciatis, dicta minus
+          adipisci nulla assumenda?
+        </p>
+      </div>
+      <h3>Title</h3>
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae
+          inventore aliquid nihil expedita impedit veritatis sit animi qui rerum
+          ipsam quasi quisquam doloremque, laudantium perspiciatis, dicta minus
+          adipisci nulla assumenda?
+        </p>
+      </div>
+      <h3>Title</h3>
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae
+          inventore aliquid nihil expedita impedit veritatis sit animi qui rerum
+          ipsam quasi quisquam doloremque, laudantium perspiciatis, dicta minus
+          adipisci nulla assumenda?
+        </p>
+      </div>
+    </div>
+
+    <ul id="sortable">
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+      <li>item 4</li>
+      <li>item 5</li>
+      <li>item 6</li>
+    </ul>
 
     <script type="text/javascript">
-      $('#draggable').draggable();
-      $('#droppable').droppable({
-        drop: function(event, ui) {
-          alert('oh yeah...just put that anywhere buddy....');
-        }
-      });
+      $('#accordion').accordion();
+      $('#sortable').sortable();
     </script>
   </body>
 </html>
