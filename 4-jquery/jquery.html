@@ -15,22 +15,17 @@
         background-color: green;
         margin: 10px;
       }
-      .square {
-        width: 150px;
-        height: 150px;
-        background-color: red;
-        margin: 10px;
-      }
     </style>
   </head>
   <body>
     <div id="circle"></div>
-    <div class="square"></div>
-    <div class="square"></div>
+    <p>This is some text</p>
+
+    <iframe src="http://www.codestars.com" frameborder="0"></iframe>
 
     <script type="text/javascript">
-      $('div').click(function() {
-        alert('item was clicked');
+      $('#circle').hover(function() {
+        $('iframe').attr('src', 'http://www.ecowebhosting.co.uk');
       });
     </script>
   </body>
